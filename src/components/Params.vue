@@ -1,17 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }} -- {{$route.params.username}} -- {{$route.params.id}}</h1>
-    <h2>使用 :to 传值</h2>
-    <h2>:to="{name:'hi1',params:{username:'zhangsan',id:24}}"</h2>
+    <h1>{{ msg }} --  {{$route.params.newsId}}  --  {{$route.params.newsTitle}}</h1>
+    <h2>通过URL传递params</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Hi1',
+  name: 'params',
   data () {
     return {
-      msg: 'Hi1'
+      msg: 'params'
     }
   }
 }

@@ -6,6 +6,7 @@ import Hi1 from '@/components/Hi1'
 import Hi2 from '@/components/Hi2'
 import Left from '@/components/Left'
 import Right from '@/components/Right'
+import Params from '@/components/Params'
 
 Vue.use(Router)
 
@@ -38,6 +39,10 @@ export default new Router({
           component:Hi2
         }
       ]
+    },{
+      path:'/params/:newsId(\\d+)/:newsTitle',
+      name:'params',
+      component:Params
     }
   ]
 })
