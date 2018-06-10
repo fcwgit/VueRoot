@@ -48,7 +48,10 @@ export default new Router({
       beforeEnter:(to,from,next)=>{
         console.log(to);
         console.log(from);
-        next(false);
+        // next(false);
+        next({
+          path:'/'
+        })
       }
     },{
       path:'/goHome',
