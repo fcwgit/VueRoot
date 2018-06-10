@@ -14,9 +14,11 @@
       <router-link to="/fcw/1234/jspang website is good">alias</router-link>|
     </p>
     <!-- <p>========{{$route.name}}</p> -->
-    <router-view/>
-    <router-view name="left" style="float:left;width:50%;height:300px;background-color:#ccc;"></router-view>
-    <router-view name="left" style="float:right;width:50%;height:300px;background-color:#c0c;"></router-view>
+    <transition  name="fade" mode="out-in">
+      <router-view/>
+      <router-view name="left" style="float:left;width:50%;height:300px;background-color:#ccc;"></router-view>
+      <router-view name="left" style="float:right;width:50%;height:300px;background-color:#c0c;"></router-view>
+    </transition>
   </div>
 </template>
 
@@ -34,5 +36,18 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-enter-active{
+  transition: opacity 0.5s;
+}
+.fade-leave{
+  opacity: 1;
+}
+.fade-leave-active{
+  transition: opacity 0.5s;
 }
 </style>
