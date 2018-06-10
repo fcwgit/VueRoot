@@ -7,6 +7,7 @@ import Hi2 from '@/components/Hi2'
 import Left from '@/components/Left'
 import Right from '@/components/Right'
 import Params from '@/components/Params'
+import Error from '@/components/Error'
 
 Vue.use(Router)
 
@@ -51,6 +52,9 @@ export default new Router({
       path:'/goHomeParams/:newsId(\\d+)/:newsTitle',
       redirect:'/params/:newsId(\\d+)/:newsTitle',
       alias:'/fcw'
+    },{
+      path:'*',
+      component:Error
     }
   ]
 })
