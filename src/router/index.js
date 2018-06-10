@@ -48,7 +48,8 @@ export default new Router({
       redirect:'/'
     },{
       path:'/goHomeParams/:newsId(\\d+)/:newsTitle',
-      redirect:'/params/:newsId(\\d+)/:newsTitle'
+      redirect:'/params/:newsId(\\d+)/:newsTitle',
+      alias:'/fcw'
     }
   ]
 })

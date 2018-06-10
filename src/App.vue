@@ -11,6 +11,7 @@
 
       <router-link to="/goHome">goHome</router-link>|
       <router-link to="/goHomeParams/1234/jspang website is good">goHomeParams</router-link>|
+      <router-link to="/fcw/1234/jspang website is good">alias</router-link>|
     </p>
     <!-- <p>========{{$route.name}}</p> -->
     <router-view/>
