@@ -45,14 +45,14 @@ export default new Router({
       path:'/params/:newsId(\\d+)/:newsTitle',
       name:'params',
       component:Params,
-      beforeEnter:(to,from,next)=>{
-        console.log(to);
-        console.log(from);
-        // next(false);
-        next({
-          path:'/'
-        })
-      }
+      // beforeEnter:(to,from,next)=>{
+      //   console.log(to);
+      //   console.log(from);
+      //   // next(false);
+      //   next({
+      //     path:'/'
+      //   })
+      // }
     },{
       path:'/goHome',
       redirect:'/'
