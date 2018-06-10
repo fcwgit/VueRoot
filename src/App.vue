@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
+    <div>
+      <button @click="goBack()">后退</button>
+      <button @click="goAhead()">前进</button>
+      <button @click="goHome()">返回首页</button>
+    </div>
     <p>
       导航：
       <router-link to="/">首页</router-link>|
@@ -25,7 +30,19 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    // Vue2.0后可以如此定义方法
+    goBack(){
+      this.$router.go(-1);
+    },
+    goAhead:function(){
+      this.$router.go(1);
+    },
+    goHome(){
+      this.$router.push('/');
+    }
+  }
 }
 </script>
 
